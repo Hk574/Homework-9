@@ -31,7 +31,7 @@ COPY ./requirements.txt /myapp/requirements.txt
 
 # Install Python dependencies
 RUN pip install --upgrade pip \
-    && pip install -r requirements.txt
+    && pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of your application's code
 COPY . /myapp
